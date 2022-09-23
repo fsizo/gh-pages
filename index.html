@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaBecaLhO</title>
+</head>
+<body>
+    <script>
+        console.log('Show me something');
+    
+        getData();
+
+        async function getData() {
+            const response = await fetch('test.csv');
+            const data = await response.text();
+            console.log(data);
+            const table = data.split('\n');
+            table.forEach(row=> {
+                const columns = row.split(',');
+                const year = columns[0];
+                const temp = row[1];
+                console.log(year, temp0);
+            })
+        }
+        fetch('test.csv')
+    
+    </script>
+</body>
+</html>
